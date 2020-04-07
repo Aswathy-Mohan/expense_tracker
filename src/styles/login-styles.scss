@@ -1,0 +1,37 @@
+@import "./button-styles";
+@import "./error_message";
+@import "./color-styles";
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  .header-div {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: rgb(7, 87, 34);
+  }
+  .form-box {
+    border: 1px solid d5dbe2;
+    box-shadow: 20px 20px 50px #d5dbe2;
+    padding: 5%;
+    .submit-button {
+      @include button-style(
+        $primary-button-active,
+        $primary-button-disable,
+        $primary-button-hover
+      );
+    }
+    .reset-button {
+      @include button-style(
+        $secondary-button-active,
+        $secondary-button-disable,
+        $secondary-button-hover
+      );
+    }
+  }
+}

@@ -1,12 +1,8 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      Expense Tracker
-    </div>
-  );
+function App(props) {
+  return <div>{props.children}</div>;
 }
 
 export default App;

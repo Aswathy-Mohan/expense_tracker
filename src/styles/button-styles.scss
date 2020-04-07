@@ -1,0 +1,21 @@
+@mixin button-style($active, $disable, $hover) {
+  background-color: $active;
+  border-style: none;
+  outline: none;
+  &:active {
+    background-color: $active;
+    border-style: none;
+    outline: none;
+  }
+  &:disabled {
+    background-color: $disable;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $disable;
+      cursor: not-allowed;
+    }
+  }
+  &:hover {
+    background-color: $hover;
+  }
+}
